@@ -2,7 +2,7 @@ self:
 { config, pkgs, lib, ... }:
 with lib; let
   cfg = config.services.test_nix;
-  test_nix = self.defaultPackage.${pkgs.system};
+  test_nix = self.outputs.packages.x86_64-linux.default;
 in {
   options.services.test_nix = {
     enable = mkEnableOption "test_nix";

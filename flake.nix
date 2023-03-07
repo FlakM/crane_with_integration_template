@@ -115,6 +115,7 @@
             inherit system;
             inherit pkgs;
             inherit test_nix;
+            inherit self;
           };
         };
 
